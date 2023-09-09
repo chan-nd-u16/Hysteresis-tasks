@@ -1,0 +1,13 @@
+$find="SELECT * FROM `newuserdata` where name='$name';";
+    $p=mysqli_query($auth,$find);
+    if($p->num_rows==0){
+        $sq="INSERT INTO `data`(name,age,email) values('{$name}','{$age}','{$email}')";
+        mysqli_query($auth,$sq);
+        echo "'<h3 style='text-align:center;color:white'>Value inserted in the table</h3>'";
+        
+
+    }
+    else{
+        echo "'<h3 style='text-align:center;color:white'>This is already present you cannot insert</h3>'";
+        
+    }

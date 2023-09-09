@@ -1,0 +1,8 @@
+CREATE TABLE Employees (id int,name string,salary int)
+INSERT INTO Employees (id,name,salary)VALUES(1,'Sangeeta',100000)
+INSERT INTO Employees (id,name,salary)VALUES(2,'Ranjitha',150000)
+INSERT INTO Employees (id,name,salary)VALUES(3,'Anitha',70000)
+INSERT INTO Employees (id,name,salary)VALUES(4,'Sunita',50000)
+INSERT INTO Employees (id,name,salary)VALUES(5,'Anjeetha',90000)
+SELECT * from Employees
+order by salary DESC LIMIT 1,1

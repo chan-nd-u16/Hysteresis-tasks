@@ -1,0 +1,1 @@
+select * from Employees where EmpName not in ('sanjay','sonia')

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            height: 100px;
+            width: 100px;
+            border: solid;
+        }
+        .div2{
+         float: right;
+         border: solid;
+         
+        
+        }
+        
+    </style>
+</head>
+<body>
+    <h2>on 1st hover div created,2nd hoverimage should be put inside along person name in that div </h2>
+    <div class="div1"></div>
+</body>
+</html>
+<script>
+    let div1=document.getElementsByClassName('div1')[0]
+    let i=0
+    div1.addEventListener('mouseover',create)
+    function create(){
+        i++
+        // console.log(i)
+        let div2=document.createElement('div')
+        div2.classList="div2"
+        document.body.appendChild(div2)
+        if(i%2==0){
+            let created_div=document.getElementsByClassName('div2')[0]
+            let create_image=document.createElement('img')
+            create_image.src="https://c4.wallpaperflare.com/wallpaper/323/831/756/magnus-carlsen-chess-beard-hd-wallpaper-preview.jpg"
+            let name=document.createElement("h2")
+            name.innerHTML="magnus carlsen"
+            
+            created_div.appendChild(create_image)
+            created_div.appendChild(name)
+        }
+
+
+    }
+
+
+
+</script>
